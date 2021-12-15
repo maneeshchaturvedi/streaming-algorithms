@@ -20,7 +20,7 @@ class BoyerMooreMajorityTest {
     void majorityCandidate_SequenceOfSizeOne() {
         Integer[] sequence = new Integer[]{1001};
         Integer candidate  = boyerMooreMajority.majorityCandidate(sequence);
-        assertEquals(candidate, 1);
+        assertEquals(candidate, 1001);
     }
     @org.junit.jupiter.api.Test
     void majorityCandidateIs2() {
