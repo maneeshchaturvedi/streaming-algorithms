@@ -19,21 +19,16 @@ public class MisraGries {
     public Set<Integer> keys() {
         return associativeArr.keySet();
     }
-    public Integer query(Integer element) {
+    public Long query(Integer element) {
         if (associativeArr.containsKey(element)) {
             return freq(element);
         }
         return null;
     }
 
-    private Integer freq(Integer element) {
-        Integer freq = 0;
-        for(Integer x : sequence ){
-            if(x.equals(element)){
-                freq++;
-            }
-        }
-        return freq;
+    private Long freq(Integer element) {
+        return Arrays.stream(sequence).filter(e-> e.equals(element)).count();
+
     }
 
     private void populateAssociativeArr() {

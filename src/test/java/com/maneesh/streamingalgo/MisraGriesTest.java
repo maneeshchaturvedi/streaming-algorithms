@@ -12,7 +12,7 @@ class MisraGriesTest {
 
     @Test
     void query_Top2FreqElements() {
-        Stream stream = Stream.of(1,5,2,4,2,4,3,4,2,4,5,4,5,3,2,5,4,5,5,4);
+        Stream<Integer> stream = Stream.of(1,5,2,4,2,4,3,4,2,4,5,4,5,3,2,5,4,5,5,4);
         int k = 2;
         MisraGries mg = new MisraGries(stream, k);
 
@@ -25,7 +25,7 @@ class MisraGriesTest {
         assertFalse(keys.contains(1));
 
 
-        Integer freq = mg.query(4);
+        Long freq = mg.query(4);
         assertEquals(freq, 7);
         freq = mg.query(5);
         assertEquals(freq, 6);
@@ -43,7 +43,7 @@ class MisraGriesTest {
     }
     @Test
     void query_Top4FreqElements() {
-        Stream stream = Stream.of(1,5,2,4,2,4,3,4,2,4,5,4,5,3,2,5,4,5,5,4);
+        Stream<Integer> stream = Stream.of(1,5,2,4,2,4,3,4,2,4,5,4,5,3,2,5,4,5,5,4);
         int k = 4;
         MisraGries mg = new MisraGries(stream, k);
 
@@ -55,7 +55,7 @@ class MisraGriesTest {
         assertTrue(keys.contains(3));
         assertFalse(keys.contains(1));
 
-        Integer freq = mg.query(4);
+        Long freq = mg.query(4);
         assertEquals(freq, 7);
         freq = mg.query(5);
         assertEquals(freq, 6);
