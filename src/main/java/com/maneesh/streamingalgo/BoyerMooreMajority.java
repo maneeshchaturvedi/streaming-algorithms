@@ -1,10 +1,15 @@
 package com.maneesh.streamingalgo;
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 /**
  * An implementation of the Boyer-Moore Majority Algorithm
  */
 public class BoyerMooreMajority {
-    public Integer majorityCandidate(Integer [] sequence){
+    public Integer majorityCandidate(Stream<Integer> stream){
+        Integer [] sequence = stream.toArray(Integer[]::new);
+
         if(sequence == null || sequence.length == 0)return null;
 
         Integer candidate = null;
