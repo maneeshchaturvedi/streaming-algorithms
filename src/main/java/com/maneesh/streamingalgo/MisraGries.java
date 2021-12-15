@@ -1,16 +1,18 @@
 package com.maneesh.streamingalgo;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class MisraGries {
     private final Map<Integer, Integer> associativeArr;
     private final int k;
     private final Integer[] sequence;
 
-    public MisraGries(Integer[] sequence, int k) {
+    public MisraGries(Stream<Integer> stream, int k) {
+
         associativeArr = new HashMap<>();
         this.k = k;
-        this.sequence = sequence;
+        this.sequence = stream.toArray(Integer[]::new);
         populateAssociativeArr();
     }
 

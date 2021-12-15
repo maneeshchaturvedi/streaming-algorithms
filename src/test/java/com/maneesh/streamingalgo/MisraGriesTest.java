@@ -4,6 +4,7 @@ package com.maneesh.streamingalgo;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,9 +12,9 @@ class MisraGriesTest {
 
     @Test
     void query_Top2FreqElements() {
-        Integer [] sequence =  new Integer[]{1,5,2,4,2,4,3,4,2,4,5,4,5,3,2,5,4,5,5,4};
+        Stream stream = Stream.of(1,5,2,4,2,4,3,4,2,4,5,4,5,3,2,5,4,5,5,4);
         int k = 2;
-        MisraGries mg = new MisraGries(sequence, k);
+        MisraGries mg = new MisraGries(stream, k);
 
         Set<Integer> keys = mg.keys();
         assertEquals(keys.size(), 2);
@@ -42,9 +43,9 @@ class MisraGriesTest {
     }
     @Test
     void query_Top4FreqElements() {
-        Integer [] sequence =  new Integer[]{1,5,2,4,2,4,3,4,2,4,5,4,5,3,2,5,4,5,5,4};
+        Stream stream = Stream.of(1,5,2,4,2,4,3,4,2,4,5,4,5,3,2,5,4,5,5,4);
         int k = 4;
-        MisraGries mg = new MisraGries(sequence, k);
+        MisraGries mg = new MisraGries(stream, k);
 
         Set<Integer> keys = mg.keys();
         assertEquals(keys.size(), 4);
