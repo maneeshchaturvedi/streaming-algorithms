@@ -23,7 +23,7 @@ class MisraGriesTest {
         assertFalse(keys.contains(3));
         assertFalse(keys.contains(1));
 
-        
+
         Integer freq = mg.query(4);
         assertEquals(freq, 7);
         freq = mg.query(5);
