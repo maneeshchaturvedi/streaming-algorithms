@@ -9,7 +9,6 @@ public class MisraGries {
     private final Integer[] sequence;
 
     public MisraGries(Stream<Integer> stream, int k) {
-
         associativeArr = new HashMap<>();
         this.k = k;
         this.sequence = stream.toArray(Integer[]::new);

@@ -20,6 +20,11 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.eprst</groupId>
+            <artifactId>murmur3</artifactId>
+            <version>0.4.3</version>
+        </dependency>
     </dependencies>
 
     <properties>
